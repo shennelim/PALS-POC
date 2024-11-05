@@ -21,7 +21,7 @@ if not check_password():
 
 documents_loaded = load_files()
 
-semantic_chunking(documents_loaded)
+#semantic_chunking(documents_loaded)
     
 # endregion <--------- Streamlit App Configuration --------->
 
