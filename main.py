@@ -6,7 +6,7 @@ from logics.customer_query_handler import process_user_message
 from helper_functions.llm import get_embedding
 from helper_functions.utility import check_password
 from helper_functions.loaddata import load_files
-from helper_functions.preretrieval import semantic_chunking
+#from helper_functions.preretrieval import semantic_chunking
 
 
 # region <--------- Streamlit App Configuration --------->
