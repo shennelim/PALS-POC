@@ -8,7 +8,7 @@ st.set_page_config(
 # endregion <--------- Streamlit App Configuration --------->
 
 # Title
-st.markdown("#About Us")
+st.markdown("# About Us")
 
 st.write("This is a Pet Ownership & Quarantine Chatbot that powered by a large language model (LLM) to provide real-time, \
          personlised support to pet owners, offering guidance on pet care, health protocols, and welfare activities tailored to individual circumstances.")
