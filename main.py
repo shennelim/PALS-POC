@@ -12,7 +12,6 @@ st.set_page_config(
     page_title="My Streamlit App"
  )
 
-print(st.secrets["password"])
 # Do not continue if check_password is not True.  
 if not check_password():  
     st.stop()
