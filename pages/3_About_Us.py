@@ -32,6 +32,7 @@ with st.expander("Project Scope"):
                 health protocols, and mental wellness activities tailored to individual circumstances.
 
                 LLMs will enhance the chatbot's functionality in several ways: \
+                
                 - **Natural Language Understanding**: The LLM will enable the chatbot to understand and respond to \
                 user inquiries in a conversational manner, making it accessible for users of all ages and backgrounds. 
                 - **Personalisation**: By analyzing user input, the LLM can provide tailored advice based on the \
