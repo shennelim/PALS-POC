@@ -3,7 +3,10 @@ import streamlit as st
 import pandas as pd
 # from helper_functions import llm
 from logics.customer_query_handler import process_user_message
+from helper_functions.llm import get_embedding
 from helper_functions.utility import check_password
+from helper_functions.loaddata import load_files
+from helper_functions.preretrieval import semantic_chunking
 
 
 # region <--------- Streamlit App Configuration --------->
@@ -15,6 +18,10 @@ st.set_page_config(
 # Do not continue if check_password is not True.  
 if not check_password():  
     st.stop()
+
+documents_loaded = load_files()
+
+semantic_chunking(documents_loaded)
     
 # endregion <--------- Streamlit App Configuration --------->
 
@@ -36,6 +43,6 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    print(course_details)
-    df = pd.DataFrame(course_details)
-    df 
+    #print(course_details)
+    #df = pd.DataFrame(course_details)
+    #df 

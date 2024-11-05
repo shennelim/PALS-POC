@@ -11,7 +11,7 @@ url = "https://www.nparks.gov.sg/avs/resources"
 
 i = 0
 
-list_of_documents_loaded = []
+#list_of_documents_loaded = []
 
 # From all links check for pdf link and
 # if present download file
@@ -34,23 +34,19 @@ for page < 4:
     try:
         if ('.pdf' in link.get('href', [])):
           i += 1
-          #print("Downloading file: ", i)
+          
+          #loader = TextLoader(requests.get(url+"/"+link.get('href')).content)
 
-          # Get response object for link
-          response = requests.get(url+link.get('href'))
+          response = requests.get(url+"/"+link.get('href'))
+          file_Path = f".\data\{i}.pdf"
 
-          # Write content in pdf file
-          #pdf = open("pdf"+str(i)+".pdf", 'wb')
-          #pdf.write(response.content)
-          #pdf.close()
-          #print("File ", i, " downloaded")
-          loader = TextLoader(requests.get(url+"/"+link.get('href')).content)
+        if response.status_code == 200:
+            with open(file_Path, 'wb') as file:
+                file.write(response.content)
+            print('File downloaded successfully')
+        else:
+            print('Failed to download file')
 
-          # load() returns a list of Document objects
-          data = loader.load()
-          # use extend() to add to the list_of_documents_loaded
-          list_of_documents_loaded.extend(data)
-          print(f"Loaded {url+link.get('href')}")
 
     except Exception as e:
           # if there is an error loading the document, print the error and continue to the next document
