@@ -32,6 +32,9 @@ def identify_category_and_courses(user_message):
     delimiter = "####"
 
     system_message = f"""
+    If are no relevant resources are found, output "This information is unavailable in our database. For more details, you may visit the AVS website: https://nparks.gov.sg/avs/resources/".
+    """
+    """
     You will be provided with customer service queries. \
     The customer service query will be enclosed in
     the pair of {delimiter}.
