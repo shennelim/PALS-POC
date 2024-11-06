@@ -81,6 +81,9 @@ def generate_response_based_on_course_details(user_message, product_details):
     delimiter = "####"
 
     system_message = f"""
+     If are no relevant resources are found, output "This information is unavailable in our database. For more details, you may visit the AVS website: https://nparks.gov.sg/avs/resources/".
+    """
+    """
     Follow these steps to answer the customer queries.
     The customer query will be delimited with a pair {delimiter}.
 
