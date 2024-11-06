@@ -26,3 +26,15 @@ with st.expander("DISCLAIMER"):
 
 # Title
 st.markdown("# Methodology")
+
+# Body 
+
+with st.expander("Data Integration"):
+    st.markdown("""
+                Multiple documents from https://nparks.gov.sg/avs/resources/ have been integrated to support the LLM in processing \
+                user queries and provide factual updates based on the organisation's policies.
+                """)
+
+
+#with st.expander("Flow Chart"):
+   # st.image()
