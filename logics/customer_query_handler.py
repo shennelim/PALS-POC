@@ -80,7 +80,7 @@ def get_course_details(list_of_relevant_category_n_course: list[dict]):
     return list_of_course_details
 
 
-def generate_response_based_on_course_details(user_message, product_details):
+def generate_response_based_on_course_details(user_message):
     delimiter = "####"
 
     system_message = f"""
@@ -132,14 +132,14 @@ def process_user_message(user_input):
     delimiter = "```"
 
     # Process 1: If Courses are found, look them up
-    category_n_course_name = identify_category_and_courses(user_input)
+    #category_n_course_name = identify_category_and_courses(user_input)
     print("category_n_course_name : ", category_n_course_name)
 
     # Process 2: Get the Course Details
-    course_details = get_course_details(category_n_course_name)
+    #course_details = get_course_details(category_n_course_name)
 
     # Process 3: Generate Response based on Course Details
-    reply = generate_response_based_on_course_details(user_input, course_details)
+    reply = generate_response_based_on_course_details(user_input)
 
 
     return reply
