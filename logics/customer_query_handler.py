@@ -139,4 +139,4 @@ def process_user_message(user_input):
     reply = generate_response_based_on_course_details(user_input, course_details)
 
 
-    return reply, course_details
+    return reply
