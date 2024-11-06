@@ -27,7 +27,7 @@ with open(filepath, 'r') as file:
     json_string = file.read()
     dict_of_courses = json.loads(json_string)
 
-"""
+
 def identify_category_and_courses(user_message):
     delimiter = "####"
 
@@ -35,7 +35,6 @@ def identify_category_and_courses(user_message):
     If are no relevant resources are found, output "This information is unavailable in our database. For more details, you may visit the AVS website: https://nparks.gov.sg/avs/resources/".
     """
     """
-"""
     You will be provided with customer service queries. \
     The customer service query will be enclosed in
     the pair of {delimiter}.
@@ -57,7 +56,7 @@ def identify_category_and_courses(user_message):
     Ensure your response contains only the list of dictionary objects or an empty list, \
     without any enclosing tags or delimiters.
     """
-"""
+
     messages =  [
         {'role':'system',
          'content': system_message},
@@ -66,9 +65,8 @@ def identify_category_and_courses(user_message):
     ]
     category_and_product_response_str = llm.get_completion_by_messages(messages)
     category_and_product_response_str = category_and_product_response_str.replace("'", "\"")
-    category_and_product_response = json.loads(category_and_product_response_str)
-    return category_and_product_response
-    """
+    #category_and_product_response = json.loads(category_and_product_response_str)
+    #return category_and_product_response_str
 
 def get_course_details(list_of_relevant_category_n_course: list[dict]):
     course_names_list = []
