@@ -36,7 +36,7 @@ def identify_category_and_courses(user_message):
     The customer service query will be enclosed in
     the pair of {delimiter}.
 
-    Decide if the query is relevant to any specific courses
+    Decide if the query is relevant to any specific resources
     in the Python dictionary below, which each key is a `category`
     and the value is a list of `course_name`.
 
@@ -48,7 +48,7 @@ def identify_category_and_courses(user_message):
 
     {category_n_course_name}
 
-    If are no relevant courses are found, output an empty list.
+    If are no relevant resources are found, output "You may visit the AVS website for more information: https://nparks.gov.sg/avs/resources/".
 
     Ensure your response contains only the list of dictionary objects or an empty list, \
     without any enclosing tags or delimiters.
