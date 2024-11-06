@@ -55,7 +55,7 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    response, course_details = process_user_message(user_prompt)
+    response = process_user_message(user_prompt)
     st.write(response)
 
     st.divider()
