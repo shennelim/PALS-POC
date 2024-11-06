@@ -36,5 +36,10 @@ with st.expander("Data Integration"):
                 """)
 
 
-#with st.expander("Flow Chart"):
+with st.expander("Flow Chart"):
+    st.markdown(""" 
+                Below is a generic flowchart containing our information ranging from our data collection process, to \
+                integration of the chatbot into a Streamlit application, to \
+                ensuring it handles context well and iterating based on feedback.
+                """)
    # st.image()
