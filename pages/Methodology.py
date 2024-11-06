@@ -42,4 +42,4 @@ with st.expander("Flow Chart"):
                 integration of the chatbot into a Streamlit application, to \
                 ensuring it handles context well and iterating based on feedback.
                 """)
-   # st.image()
+   # st.image("./data/Methodology.png", caption="Flowchart")
